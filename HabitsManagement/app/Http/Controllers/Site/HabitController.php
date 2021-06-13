@@ -20,7 +20,7 @@ class HabitController extends Controller
         $user = auth()->user();
         $habits = Habit::where('user_id', $user->getAuthIdentifier())->get();
 
-        return view('habits.index', ['habits' => $habits]);
+        return view('system.habit.index', ['habits' => $habits]);
     }
 
 //    public function create()
@@ -28,11 +28,11 @@ class HabitController extends Controller
 //        return view('habits.create');
 //    }
 //
-//    public function store(ValidateHabitRequest $request, CreateOfHabits $createOfHabits)
+//    public function store(Request $request)
 //    {
-//        $habit = $createOfHabits->createHabits($request);
+//        $habit = new Habit($request);
 //
-//        if(!($habit instanceof Habit)){
+//        if (!($habit instanceof Habit)) {
 //            return redirect()->route('create');
 //        }
 //        else{
