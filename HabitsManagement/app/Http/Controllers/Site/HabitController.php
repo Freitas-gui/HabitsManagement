@@ -23,10 +23,10 @@ class HabitController extends Controller
         return view('system.habit.index', ['habits' => $habits]);
     }
 
-//    public function create()
-//    {
-//        return view('habits.create');
-//    }
+    public function create()
+    {
+        return view('system.habit.create');
+    }
 //
 //    public function store(Request $request)
 //    {

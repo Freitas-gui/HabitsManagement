@@ -2,11 +2,15 @@
 
 @section('content')
     @include('layouts.headers.simple')
-    @foreach($habits as $habit)
+{{--    @foreach($habits as $habit)--}}
         <div class="container">
             <div class="row">
-
                 <div class="table-responsive my-5">
+                    <div class="d-flex align-items-end mb-3 flex-column">
+                        <div>
+                            <a class="btn btn-default" href="{{route('habit.create')}}">Create Habit</a>
+                        </div>
+                    </div>
                     <div>
                         <table class="table align-items-center table-dark">
                             <thead class="thead-dark">
@@ -73,5 +77,5 @@
 
             </div>
         </div>
-    @endforeach
+{{--    @endforeach--}}
 @endsection

@@ -25,5 +25,6 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 
-    Route::get('habit', [HabitController::class, 'index']);
+    Route::get('habit', [HabitController::class, 'index'])->name('habit.index');
+    Route::get('habit/create', [HabitController::class, 'create'])->name('habit.create');
 });
