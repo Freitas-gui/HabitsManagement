@@ -14,7 +14,7 @@ class CreateHabitsTable extends Migration
     public function up()
     {
         Schema::create('habits', function (Blueprint $table) {
-            $table->unsignedBigInteger('id');
+            $table->unsignedBigInteger('id')->autoIncrement();
 
             $table->string('title');
             $table->integer('priority');
@@ -23,6 +23,7 @@ class CreateHabitsTable extends Migration
             $table->string('how');
             $table->string('when');
             $table->string('how_much');
+            $table->string('where');
             $table->foreignId('user_id')->constrained('users');
 
             $table->timestamps();
