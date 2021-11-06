@@ -106,6 +106,12 @@
                 </li>
 
                 <li class="nav-item">
+                    <a class="nav-link" href="{{route('habit.index')}}">
+                        <i class="ni ni-sound-wave text-blue"></i> Habits
+                    </a>
+                </li>
+
+                <li class="nav-item">
                     <a class="nav-link" href="#">
                         <i class="ni ni-planet text-blue"></i> {{ __('Icons') }}
                     </a>
