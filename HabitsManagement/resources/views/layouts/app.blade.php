@@ -37,7 +37,7 @@
 
         <script src="{{ asset('argon') }}/vendor/jquery/dist/jquery.min.js"></script>
         <script src="{{ asset('argon') }}/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
+        <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
         @stack('js')
 
         <!-- Argon JS -->
