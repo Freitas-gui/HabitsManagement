@@ -21,10 +21,10 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('user', 'UserController', ['except' => ['show']]);
-	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
+
+    Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 
-    Route::get('habit', [HabitController::class, 'index'])->name('habit.index');
-    Route::get('habit/create', [HabitController::class, 'create'])->name('habit.create');
+    Route::resource('habit', 'Site\HabitController');
 });
